@@ -1,52 +1,43 @@
-# Prerequisites
-*.d
+# doit databases
+/.doit.db.*
 
-# Object files
+# python
+__pycache__
+
+# generated application files
+*.bin
 *.o
-*.ko
-*.obj
 *.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
+*.asm
 *.out
-*.app
-*.i*86
-*.x86_64
 *.hex
+*_image.vhd
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# keep default VHDL memory images
+!rtl/core/*_image.vhd
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# host executables
+sw/image_gen/image_gen
+sw/image_gen/image_gen.exe
+
+# temporary/legacy files/folders
+*.tmp
+~*
+
+# generated documentation stuff
+/docs/doxygen_build/
+/docs/.asciidoctor/
+/docs/public/
+/docs/figures/diag-*.svg
+
+# compiled ghdl stuff
+*.cf
+*.o
+
+# example bitstreams
+/setups/examples/*.bit
+/setups/examples/*.svf
+
+# riscv-arch-test
+
+/sim/work/
